@@ -166,7 +166,7 @@ object CurseForge : Platform(
         // Handle mcVersions
         val gameVersionTypeIds = mcVersions.mapNotNull { version: String ->
             requestGameVersionTypeId(version)?.also {
-                requestUrl += "&gameVersionTypeId=$it"
+                requestUrl += "&gameVersion=$version"
             }
         }
 
